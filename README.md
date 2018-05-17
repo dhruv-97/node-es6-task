@@ -122,7 +122,7 @@ $ npm test
 
 > `npm test` will run `mocha` and provide full 100% code coverage with Istanbul.
 
-9. If you want to run the java linter
+9. If you want to run the javascript linter
 ```
 $ npm run pretest
 ```
