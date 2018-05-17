@@ -177,7 +177,7 @@ $ npm run pretest -- --fix
 
 # Features
 
-1. Use modern javascript ES6 syntax
+1. Used modern javascript ES6 syntax
 
 2. Included a test suite for the microservice and covered 100% code in test suite. Also generated code test coverage reports through Istanbul
 
