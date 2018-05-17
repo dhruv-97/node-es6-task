@@ -139,14 +139,14 @@ $ npm run pretest -- --fix
 
 ```javascript
   {
-      username:"dhruv",
-      password:"1234"
+      "username" : "dhruv",
+      "password" : "1234"
   }
   ```
   >You should see the following response
   ```javascript
   {
-       token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRocnV2IiwiaWF0IjoxNTI2NTY5NDM4LCJleHAiOjE1MjY1NzY2Mzh9.TT97A10iBu9TnRA01PqWsO3RVUehUZ7CNkBHUbIuIHQ"
+       "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRocnV2IiwiaWF0IjoxNTI2NTY5NDM4LCJleHAiOjE1MjY1NzY2Mzh9.TT97A10iBu9TnRA01PqWsO3RVUehUZ7CNkBHUbIuIHQ"
   }
   ```
 2. Navigate to `http://localhost:8000/patch` in postman and make a post request with the following header and following object
@@ -162,7 +162,7 @@ $ npm run pretest -- --fix
   >You should see the following response
   ```javascript
   {
-      foo: "bar"
+      "foo" : "bar"
   }
   ```
 3. Navigate to `http://localhost:8000/image` in postman and make a post request with the following header and following object
