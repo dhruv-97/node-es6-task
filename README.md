@@ -71,7 +71,13 @@ node-es6-test/
   $ sudo n stable
   ```
   
-2. Configure your jsonwebtoken in `config/env`. E.g.:
+2. Clone the respository
+  
+  ```
+  $ git clone https://github.com/dhruv_97/node-es6-task
+  ```
+
+3. Configure your jsonwebtoken in `config/env`. E.g.:
 
   ```javascript
   module.exports = {
@@ -82,12 +88,6 @@ node-es6-test/
   };
   ```
 
-3. Clone the respository
-  
-  ```
-  $ git clone https://github.com/dhruv_97/node-es6-task
-  ```
-  
 4. Navigate into the folder  
 
   ```
