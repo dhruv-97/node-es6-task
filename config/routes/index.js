@@ -5,7 +5,7 @@ const imageRoutes = require('./image');
 
 const router = express.Router();
 
-router.use('/auth', authRoutes);
+router.use('/login', authRoutes);
 router.use('/patch', patchRoutes);
 router.use('/image', imageRoutes);
 

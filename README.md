@@ -61,7 +61,7 @@ node-es6-test/
 ```
 
 
-## How to use this code?
+# How to use this code?
 
 1. Make sure you have the latest stable version of Node.js installed
 
@@ -132,3 +132,47 @@ $ npm run pretest
 ```
 $ npm run pretest -- --fix
 ```
+
+# Testing the routes
+
+1. Navigate to `http://localhost:8000/login` in postman and make a post request with the following object
+
+```javascript
+  {
+      username:"dhruv",
+      password:"1234"
+  }
+  ```
+  >You should see the following response
+  ```javascript
+  {
+       token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRocnV2IiwiaWF0IjoxNTI2NTY5NDM4LCJleHAiOjE1MjY1NzY2Mzh9.TT97A10iBu9TnRA01PqWsO3RVUehUZ7CNkBHUbIuIHQ"
+  }
+  ```
+2. Navigate to `http://localhost:8000/patch` in postman and make a post request with the following header and following object
+
+`Authorization:Bearer token` 
+
+```javascript
+  {
+      "original":{},
+      "patch":{"op": "add", "path": "/foo", "value": "bar"}
+  }
+  ```
+  >You should see the following response
+  ```javascript
+  {
+      foo: "bar"
+  }
+  ```
+3. Navigate to `http://localhost:8000/patch` in postman and make a post request with the following header and following object
+
+```javascript
+  {
+    "url":"https://cdn.pixabay.com/photo/2018/05/15/09/23/raindrop-3402550_640.jpg"
+  }
+  ```
+  >You should recieve a 50x50px thumbnail as response
+
+
+

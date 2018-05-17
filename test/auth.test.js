@@ -9,7 +9,7 @@ describe('Auth', () => {
   describe('POST /auth', () => {
     it('It should auth the user Dhruv', (done) => {
       request(app)
-        .post('/auth')
+        .post('/login')
         .send({
           username: 'Dhruv',
           password: '1234',
@@ -25,7 +25,7 @@ describe('Auth', () => {
   describe('POST /auth', () => {
     it('It should not authenticate this user', (done) => {
       request(app)
-        .post('/auth')
+        .post('/login')
         .send({
           username: 'Dhruv',
         })
