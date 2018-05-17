@@ -57,12 +57,5 @@ typings/
 # dotenv environment variables file
 .env
 
-#images
-images/*
-thumbnails/*
-
-#logs
-logs/*
-
 
 
