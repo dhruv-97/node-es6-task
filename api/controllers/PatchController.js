@@ -1,6 +1,6 @@
 const jsonpatch = require('json-patch');
-//Apply JSONPatch to an object
-//The request should be of format
+// Apply JSONPatch to an object
+// The request should be of format
 // req.body: {
 //   original: {...},
 //   patch: {...}
