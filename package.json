@@ -1,0 +1,40 @@
+{
+  "name": "node-es6-task",
+  "version": "1.0.0",
+  "description": "Node ES6 JWT",
+  "author": "Dhruv Mongia dhruv.mongia@gmail.com",
+  "homepage": "https://github.com/dhruv-97/",
+  "license": "MIT",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js",
+    "test": "nyc mocha",
+    "pretest": "eslint --ignore-path .eslintignore ."
+  },
+  "dependencies": {
+    "app-root-path": "^2.0.1",
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "express-jwt": "^5.3.1",
+    "image-downloader": "^3.3.0",
+    "json-patch": "^0.7.0",
+    "jsonwebtoken": "^8.1.0",
+    "morgan": "^1.9.0",
+    "nodemon": "^1.17.4",
+    "sharp": "^0.20.2",
+    "winston": "^2.4.2"
+  },
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "eslint": "^4.12.0",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.8.0",
+    "mocha": "^4.0.1",
+    "nyc": "^11.8.0",
+    "supertest": "^3.0.0",
+    "supertest-as-promised": "^4.0.2"
+  },
+  "directories": {
+    "test": "test"
+  }
+}
