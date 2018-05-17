@@ -165,7 +165,7 @@ $ npm run pretest -- --fix
       foo: "bar"
   }
   ```
-3. Navigate to `http://localhost:8000/patch` in postman and make a post request with the following header and following object
+3. Navigate to `http://localhost:8000/image` in postman and make a post request with the following header and following object
 
 ```javascript
   {
@@ -175,4 +175,16 @@ $ npm run pretest -- --fix
   >You should recieve a 50x50px thumbnail as response
 
 
+# Features
 
+1. Use modern javascript ES6 syntax
+
+2. Included a test suite for the microservice and covered 100% code in test suite. Also generated code test coverage reports through Istanbul
+
+3. API rejects all invalid request inputs and there is test for each edge case
+
+4. Integrated a centralized app logging/monitoring system through winston and morgan
+
+5. Used ESlint with airbnb-config and included a linting npm script
+
+6. Included a working Dockerfile with the app directory
