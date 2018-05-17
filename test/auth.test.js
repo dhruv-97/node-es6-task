@@ -7,11 +7,11 @@ describe('Auth', () => {
   let { token, error } = '';
 
   describe('POST /auth', () => {
-    it('It should auth the user Alf', (done) => {
+    it('It should auth the user Dhruv', (done) => {
       request(app)
         .post('/auth')
         .send({
-          username: 'Alf',
+          username: 'Dhruv',
           password: '1234',
         })
         .expect(201)
@@ -27,7 +27,7 @@ describe('Auth', () => {
       request(app)
         .post('/auth')
         .send({
-          username: 'Alf',
+          username: 'Dhruv',
         })
         .expect(401)
         .then((res) => {

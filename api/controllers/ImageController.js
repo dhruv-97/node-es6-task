@@ -6,10 +6,12 @@ const logger = require('../../config/winston');
 const options = {
   dest: 'images', // Save to /images path
 };
-// The request should be of format
-// req.body: {
-//   url: "https://foobar.com/image.jpg"
-// }
+/*
+  The request should be of format
+  req.body: {
+    url: "https://foobar.com/image.jpg"
+  }
+*/
 
 // Download all images to /images directory with original filename
 function downloadImage(req, res, next) {
@@ -25,14 +27,13 @@ function downloadImage(req, res, next) {
     });
 }
 
-// Generate a 50X50px thumbnail by resizing the original image
-// The thumbnail will be stored with the same name at thumbnails/ path
+// Generate a 50X50px thumbnail by resizing the original image and saving it to /thumbnails path
 function createThumbNail(req, res, next) {
   sharp(req.filename)
     .resize(50, 50)
     .toFile(`thumbnails/${req.baseName}`, (err, info) => {
       if (err) next(err);
-      console.log(info);
+      logger.info(info);
       next();
     });
 }

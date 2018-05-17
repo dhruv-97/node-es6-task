@@ -71,17 +71,10 @@ node-es6-test/
   $ sudo n stable
   ```
   
-2. Configure your database and jsonwebtoken in `config/env`. E.g.:
+2. Configure your jsonwebtoken in `config/env`. E.g.:
 
   ```javascript
   module.exports = {
-    mysql: {
-      host: 'localhost',
-      port: 3306,
-      database: 'jwt_dev',
-      username: 'root',
-      password: 'root',
-    },
     jwt: {
       jwtSecret: '$eCrEt',
       jwtDuration: '2 hours',
@@ -89,7 +82,7 @@ node-es6-test/
   };
   ```
 
-3. Clone it
+3. Clone the respository
   
   ```
   $ git clone https://github.com/dhruv_97/node-es6-task
@@ -127,4 +120,15 @@ node-es6-test/
 $ npm test
 ```
 
-> `npm test` will run `mocha with instalbul`.
+> `npm test` will run `mocha` and provide full 100% code coverage with Istanbul.
+
+9. If you want to run the java linter
+```
+$ npm run pretest
+```
+
+10. Or fix the styling
+
+```
+$ npm run pretest -- --fix
+```

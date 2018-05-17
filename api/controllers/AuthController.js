@@ -1,11 +1,13 @@
 const jwt = require('jsonwebtoken');
 const config = require('../../config/env');
-// Authenticate any user
-// The request should be in this form
-// req.body: {
-//   username: "dhruv",
-//   password: "dhruv"
-// }
+/*
+Authenticate any user
+The request should be in this format
+req.body: {
+  username: "dhruv",
+  password: "dhruv"
+  }
+*/
 function authenticate(req, res, next) {
   if (req.body.username && req.body.password) {
     // Match the username and password with the Database User
@@ -18,6 +20,7 @@ function authenticate(req, res, next) {
     next(err);
   }
 }
+
 // Generate a signed JWT with username as payload
 async function generateJWT(req, res, next) {
   const jwtPayload = { username: req.dbUser.username };
