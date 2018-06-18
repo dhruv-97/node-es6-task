@@ -2,7 +2,6 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const morgan = require('morgan');
 const winston = require('./winston');
-const routes = require('./routes/index');
 
 const app = express();
 
@@ -10,7 +9,14 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(morgan('combined', { stream: winston.stream }));
 // Mount all routes on / path
-app.use('/', routes);
+app.route('/').get( (req,res,next) => {
+  console.log(req.body);
+  res.send("Hello");
+});
+app.route('/').post( (req,res,next) => {
+  console.log(req.body);
+  res.send("Hello");
+});
 // error handler
 app.use((err, req, res, next) => {
   // add this line to include winston logging
